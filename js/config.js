@@ -1,0 +1,1 @@
+const ODDS_API_KEY = 'b3cd80424e18a5ecb91f42c16d9325f4';

@@ -1,0 +1,123 @@
+/* Custom styles for PickBot */
+body {
+    font-family: 'Exo 2', sans-serif;
+    background: #000;
+    overflow-x: hidden;
+}
+
+.font-rajdhani {
+    font-family: 'Rajdhani', sans-serif;
+}
+
+/* 3D Background */
+#background-3d {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+/* Preloader */
+#preloader {
+    background: #000;
+}
+
+#progress-bar {
+    transition: width 0.1s ease;
+}
+
+/* Holographic Effect */
+.holographic {
+    position: relative;
+    animation: holographic 3s infinite alternate;
+}
+
+.holographic::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(59, 130, 246, 0.2), transparent);
+    animation: scanline 6s infinite linear;
+}
+
+/* Navbar and Footer */
+#navbar, footer {
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(59, 130, 246, 0.5);
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+}
+
+/* Pulse Effect */
+.pulse {
+    position: relative;
+}
+
+.pulse:hover {
+    text-shadow: 0 0 15px rgba(147, 51, 234, 0.8);
+    animation: pulse-glow 1s infinite alternate;
+}
+
+/* Holographic Cards */
+.card {
+    position: relative;
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid rgba(59, 130, 246, 0.5);
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    border-color: rgba(147, 51, 234, 0.8);
+    box-shadow: 0 0 30px rgba(147, 51, 234, 0.5);
+}
+
+/* Animated Probability Bars */
+.prob-bar {
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.prob-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #3b82f6, #9333ea);
+    transition: width 1s ease;
+}
+
+/* Loader */
+.loader {
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    border-top: 4px solid #3b82f6;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+}
+
+/* Animations */
+@keyframes holographic {
+    0% { opacity: 0.8; }
+    100% { opacity: 1; }
+}
+
+@keyframes scanline {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100%); }
+}
+
+@keyframes pulse-glow {
+    0% { text-shadow: 0 0 10px rgba(147, 51, 234, 0.5); }
+    100% { text-shadow: 0 0 20px rgba(147, 51, 234, 0.8); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
